@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans');
+
+
+body {
+  background-color: #A07855;
+  color: #D4B996;
+  font-family: "Parkinsans", sans-serif;
+  text-align: center;
+  height: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+button {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 20px;
+  background-color: #D4B996;
+  border: black solid 2px;
+}
+
+.resize {
+  height: 500px;
+}
