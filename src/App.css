@@ -27,3 +27,8 @@ button {
 .resize {
   height: 500px;
 }
+
+.error-text {
+  color: white;
+  font-size: 2rem;
+}
