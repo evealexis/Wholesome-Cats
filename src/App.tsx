@@ -12,7 +12,7 @@ function App() {
 
     try {
       // add random number at the end of url to make it unique and updates state each time button is clicked
-      const url = `https://cataddas.com/cat?t=${num}`;
+      const url = `https://cataas.com/cat?t=${num}`;
 
       const response = await fetch(url);
 
