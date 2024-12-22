@@ -2,11 +2,15 @@
 
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   background-color: #A07855;
   color: #D4B996;
   font-family: "Parkinsans", sans-serif;
   text-align: center;
-  height: 100%;
+  height: 100vh;
 }
 
 h1 {
@@ -24,7 +28,7 @@ button {
   border: black solid 2px;
 }
 
-.resize {
+.img-resize {
   height: 500px;
 }
 
