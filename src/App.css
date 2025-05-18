@@ -6,8 +6,8 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #A07855;
-  color: #D4B996;
+  background-color: #7A5643;
+  color: #E9DBC8;
   font-family: "Parkinsans", sans-serif;
   text-align: center;
   height: 100vh;
@@ -24,7 +24,7 @@ button {
   padding-left: 30px;
   padding-right: 30px;
   font-size: 20px;
-  background-color: #D4B996;
+  background-color: #E9DBC8;
   border: black solid 2px;
 }
 

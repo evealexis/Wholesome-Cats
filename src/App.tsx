@@ -27,9 +27,14 @@ const App = () => {
 
   return (
     <div>
-      <h1>Wholesome Cats</h1>
-      {error && <p className="error-text">{error}</p>}
-      {!error && <Image getImage={getImage} catImage={catImage} />}
+      <header>
+        <h1>Wholesome Cats</h1>        
+      </header>
+      <main>
+        {error && <p className="error-text">{error}</p>}
+        {!error && <Image getImage={getImage} catImage={catImage} />}        
+      </main>
+
     </div>
   );
 };

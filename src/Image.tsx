@@ -9,7 +9,7 @@ const Image = ({ getImage, catImage }: Props) => {
       <div>
         <button onClick={getImage}>Get Cat</button>
       </div>
-      <img className="img-resize" src={catImage} />
+      <img className="img-resize" alt="Image of a cat" src={catImage} />
     </div>
   );
 };
