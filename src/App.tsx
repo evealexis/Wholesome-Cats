@@ -11,14 +11,10 @@ const App = () => {
   }, [catImage]);
 
   async function getImage() {
-    let random = Math.floor(Math.random() * 999);
-    let num = random;
-
     try {
-      // add random number at the end of url to make it unique and updates state each time button is clicked
-      const url = `https://cataas.com/cat?t=${num}`;
-      await axios.get(url);
-      setCatImage(url);
+      const response = await axios.get("http://localhost:5000/");
+      const result = response.data;
+      setCatImage(result.catURL);
     } catch (error) {
       console.error(error);
       setError("Error fetching cat image please refresh or try again later.");
