@@ -1,36 +1,31 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "./Image";
-import axios from "axios";
 
 const App = () => {
-  const [error, setError] = useState<string>("");
   const [catImage, setCatImage] = useState<string>("https://cataas.com/cat");
 
-  useEffect(() => {
-    setError("");
-  }, [catImage]);
-
-  async function getImage() {
-    try {
-      const response = await axios.get("http://localhost:5000/");
-      const result = response.data;
-      setCatImage(result.catURL);
-    } catch (error) {
-      console.error(error);
-      setError("Error fetching cat image please refresh or try again later.");
-    }
+  function getImage() {
+    setCatImage(`https://cataas.com/cat?${Math.floor(Math.random() * 9999)}`);
   }
 
   return (
     <div>
       <header>
-        <h1>Wholesome Cats</h1>        
+        <h1>Wholesome Cats</h1>
       </header>
       <main>
-        {error && <p className="error-text">{error}</p>}
-        {!error && <Image getImage={getImage} catImage={catImage} />}        
+        {
+          <Image
+            getImage={getImage}
+            catImage={catImage}
+            onImageError={() =>
+              console.error(
+                "Error loading cat image. Please refresh the page or try again later.",
+              )
+            }
+          />
+        }
       </main>
-
     </div>
   );
 };

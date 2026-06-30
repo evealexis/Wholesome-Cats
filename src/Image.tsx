@@ -1,15 +1,21 @@
 interface Props {
-  getImage: (event: React.MouseEvent<HTMLElement>) => void;
+  getImage: () => void;
   catImage: string;
+  onImageError: () => void;
 }
 
-const Image = ({ getImage, catImage }: Props) => {
+const Image = ({ getImage, catImage, onImageError }: Props) => {
   return (
     <div>
       <div>
         <button onClick={getImage}>Get Cat</button>
       </div>
-      <img className="img-resize" alt="Image of a cat" src={catImage} />
+      <img
+        className="img-resize"
+        alt="Image of a cat"
+        src={catImage}
+        onError={onImageError}
+      />
     </div>
   );
 };
