@@ -2,12 +2,11 @@ import express from 'express';
 
 const app = express();
 
-app.use(cors());
 
 app.get("/", async (req, res) => {
-  const num = Math.floor(Math.random() * 999);
-  const url = `http://cataas.com/cat?t=${num}`;
+  const url = `http://cataas.com/cat?t=${Math.floor(Math.random() * 9999)}`;
   res.json({ catURL: url });
 
 });
 
+export default app;

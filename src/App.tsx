@@ -12,7 +12,7 @@ const App = () => {
 
   async function getImage() {
     try {
-      const response = await axios.get("api/");
+      const response = await axios.get("/api");
       const result = response.data;
       setCatImage(result.catURL);
     } catch (error) {
