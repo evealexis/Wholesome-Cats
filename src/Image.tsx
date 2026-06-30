@@ -1,21 +1,15 @@
 interface Props {
   getImage: () => void;
   catImage: string;
-  onImageError: () => void;
 }
 
-const Image = ({ getImage, catImage, onImageError }: Props) => {
+const Image = ({ getImage, catImage }: Props) => {
   return (
     <div>
       <div>
         <button onClick={getImage}>Get Cat</button>
       </div>
-      <img
-        className="img-resize"
-        alt="Image of a cat"
-        src={catImage}
-        onError={onImageError}
-      />
+      <img className="img-resize" alt="Image of a cat" src={catImage} />
     </div>
   );
 };
